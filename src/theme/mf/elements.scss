@@ -1,0 +1,37 @@
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.brand {
+    color: var(--color-brand);
+    font-size: 2rem;
+    line-height: 1rem;
+    text-shadow: -2px 2px 4px 
+    rgba(0, 0, 0, 1),  
+    2px -2px 0 
+    rgba(0, 0, 0, 0.9); 
+  }
+
+  button {
+    background-color: var(--color-button);
+    border: 0.1rem solid black;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+
+  button:hover {
+    background-color: var(--color-button--hover);
+  }
+
+  button .brand {
+    font-size: 1rem;
+  }

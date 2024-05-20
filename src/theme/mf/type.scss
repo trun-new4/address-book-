@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Sigmar One';
+    src: url('../../assets/SigmarOne.woff2') format('woff2'),
+        url('../../assets/SigmarOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body,
+h1,
+h2,
+h3,
+p,div,
+span,
+ul,
+li,
+input,
+button {
+  font-family: 'Sigmar One';
+}

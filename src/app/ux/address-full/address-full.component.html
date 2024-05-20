@@ -1,0 +1,12 @@
+<div class="address-full">
+  <div class="address-full__record">
+    <h1>{{ config.name }}</h1>
+    <p>
+      {{ config.line1 }},
+      <span *ngIf="config.line2"><br />{{ config.line2 }},</span>
+      <br/>
+      {{ config.county }},
+      <br/>{{ config.postcode }}.
+    </p>
+  </div>
+</div>

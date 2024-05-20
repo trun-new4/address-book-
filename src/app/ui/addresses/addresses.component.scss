@@ -1,0 +1,43 @@
+
+.addresses__container {
+  display: flex;
+  flex-direction: row;
+  height: 25rem;
+}
+
+.addresses__container--active {
+  border-top: 0.1rem solid white;
+}
+
+.addresses {
+  overflow-y: auto;
+  min-width: 32%;
+}
+
+.addresses__empty {
+  padding: 3rem;
+  text-align: center;
+}
+.addresses__empty h1 {
+  line-height: 2.5rem;
+}
+.addresses__empty p {
+  color: var(--color-white);
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.addresses--with-detail {
+  border-right: 0.1rem solid var(--color-white);
+}
+
+.address-detail {
+  background-color: rgba(0,0,0,0.7);
+  padding: 2rem;
+  min-width: 51%;
+}
+
+.address__new {
+  margin-top: -1rem;
+  transform: rotate(353deg);
+}

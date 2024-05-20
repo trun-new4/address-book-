@@ -1,0 +1,56 @@
+<section class="address-form">
+  <h1>Create new <span class="brand">MF</span>'r</h1>
+  <div class="address-form__form">
+    <form 
+      [formGroup]="form"
+      (keydown.enter)="onSubmit()" 
+      [ngClass]="{'address-form__form--valid': canSubmit}">
+
+      <div class="address-form__input">
+        <label>Name</label>
+        <input type="text" formControlName="addressee" maxlength="50" />
+      </div>
+      <div class="address-form__input">
+        <label>Address Line 1</label>
+        <input type="text" formControlName="street1" maxlength="50" />
+      </div>
+      <div class="address-form__input">
+        <label>Address Line 2</label>
+        <input type="text" formControlName="street2" maxlength="50" />
+      </div>
+      <div class="address-form__input">
+        <label>Town</label>
+        <input type="text" formControlName="town" maxlength="50" />
+      </div>
+
+      <div class="address-form__input">
+        <label>County</label>
+        <input type="text" formControlName="county" maxlength="50" />
+      </div>
+
+      <div class="address-form__input">
+        <label>Post Code</label>
+        <input type="text" formControlName="postcode" maxlength="8" minlength="5" />
+      </div>
+    </form>
+
+    <div class="address-form__validations">
+      <div class="address-form__validations__messages" *ngIf="!canSubmit && !hasErrors">
+        <button (click)="fillRandom()">Say What?</button>
+      </div>
+      <div class="address-form__validations__messages" (click)="onSubmit()" *ngIf="canSubmit">
+        <h2 class="button">Check Out The Big Brain On Brett!</h2>
+        <button>
+          Add it Ringo!
+        </button>
+      </div>
+      <div class="address-form__validations__messages" *ngIf="hasErrors">
+        <h2>You fool!</h2>
+        <div *ngFor="let error of formValidations.errors">
+          <span class="brand">X</span>{{ error.message }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="address-form__quit" [routerLink]="['/']">X</span>
+</section>

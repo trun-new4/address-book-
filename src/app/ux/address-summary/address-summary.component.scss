@@ -1,0 +1,11 @@
+.address-summary h3 {
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+  line-height: 1.2rem;
+}
+
+.address-summary h3:hover {
+  cursor: pointer;
+  color: var(--color-white);
+  transition: color 0.2s ease-in;
+}

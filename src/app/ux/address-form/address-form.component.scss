@@ -1,0 +1,76 @@
+.address-form h1 {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.address-form__form {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.3rem solid var(--color-white);
+  padding-bottom: 2rem;
+}
+
+.address-form form {
+  width: 60%;
+  text-align: left;
+  display: inline-block;
+  margin: auto;
+}
+
+.address-form__validations {
+  width: 40%;
+}
+
+.address-form__validations__messages {
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.address-form__validations__messages h2 {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  line-height: 2rem;
+  padding-bottom: 1rem;
+}
+
+.address-form__input label {
+  display: block;
+}
+
+.address-form__input input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 2rem;
+  line-height: 2rem;
+  outline: none;
+  border: 0.1rem solid var(--color-white);
+  border-radius: 0.2rem;
+  padding-left: 1rem;
+  transition: all 0.2s ease-in;
+}
+
+.address-form__input input:focus {
+  outline: none;
+}
+
+.address-form__form--valid input,
+.address-form__form--valid input:focus {
+  outline: 0.2rem solid rgb(52, 207, 52);
+}
+
+.address-form__quit {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  transition: color 0.2s ease-in;
+}
+
+.address-form__quit:hover {
+  color: var(--color-white);
+}

@@ -1,0 +1,37 @@
+
+<div class="addresses-component">
+  <h1  *ngIf="hasAddresses">
+    <span class="brand">MF</span>'rs
+    <span *ngIf="addressId"> / {{ idPresentation }}</span>
+  </h1>
+  <div class="addresses__container" [ngClass]="{
+    'addresses__container--active': hasAddresses
+  }">
+    <div class="addresses" [ngClass]="{
+      'addresses--with-detail': !!addressId
+    }">
+      <div  *ngIf="hasAddresses">
+        <div class="address" *ngFor="let address of addresses">
+            <app-address-summary [config]="{
+                id: address.addressId,
+                name: address.addressee,
+                county: address.county
+            }"></app-address-summary>
+        </div>
+      </div>
+      <div  *ngIf="!hasAddresses" class="addresses__empty">
+        <h1>You have 0 <span class="brand">MF</span>'rs</h1>
+        <br/>
+        <p>What are you waiting for? </p>
+        <button [routerLink]="['/create']">Create one, Ringo!</button>
+      </div>
+  </div>
+  <div class="address-detail" *ngIf="addressId">
+    <app-address [config]="{addressId}"></app-address>
+  </div>
+  </div>
+  <div class="address__new"  *ngIf="hasAddresses">
+    <button [routerLink]="['/create']">Add another <span class="brand">MF</span>'r</button>
+  </div>
+
+</div>
